@@ -4,7 +4,7 @@ sh = SenseHat()
 
 #from time import sleep
 
-#sh.show_letter("I")
+# sh.show_letter("I")
 
 # set up the colours (white, green, red, empty)
 
@@ -16,14 +16,14 @@ e = [0, 0, 0]
 # create images for coloured arrow
 
 arrow = [
-e,e,e,w,w,e,e,e,
-e,e,w,w,w,w,e,e,
-e,w,e,w,w,e,w,e,
-w,e,e,w,w,e,e,w,
-e,e,e,w,w,e,e,e,
-e,e,e,w,w,e,e,e,
-e,e,e,w,w,e,e,e,
-e,e,e,w,w,e,e,e
+    e, e, e, w, w, e, e, e,
+    e, e, w, w, w, w, e, e,
+    e, w, e, w, w, e, w, e,
+    w, e, e, w, w, e, e, w,
+    e, e, e, w, w, e, e, e,
+    e, e, e, w, w, e, e, e,
+    e, e, e, w, w, e, e, e,
+    e, e, e, w, w, e, e, e
 ]
 
 red_arrow = [
@@ -54,18 +54,18 @@ while True:
     # Not really needed, except for perhaps debugging
     # Below works with Rasbian's Python 2.7.9
     #print ("x=%s, y=%s, z=%s" % (x_full,y_full,z_full))
-    
+
     # Below works with Rasbian's Python 3.4.2 AND 2.7.9
     #print ("x=%s, y=%s, z=%s" % (raw['x'],raw['y'],raw['z']))
 
-    if x == -1:  
+    if x == -1:
         sh.set_pixels(arrow)
         sh.set_rotation(90)
-    elif x == 1: 
+    elif x == 1:
         sh.set_pixels(red_arrow)
         sh.set_rotation(270)
-        
-    elif y == 1: 
+
+    elif y == 1:
         sh.set_pixels(arrow)
         sh.set_rotation(0)
     elif y == -1:
