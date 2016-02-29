@@ -56,13 +56,17 @@ while True:
     # Rotate the "arrow" (set_pixels, above) to point up
     # Assumes earth-gravity
     if x == -1:
+        sh.set_pixels(arrow)
         sh.set_rotation(90)
     elif x == 1:
+        sh.set_pixels(arrow)
         sh.set_rotation(270)
 
     elif y == 1:
+        sh.set_pixels(arrow)
         sh.set_rotation(0)
     elif y == -1:
+        sh.set_pixels(arrow)
         sh.set_rotation(180)
     else:
         sh.show_letter("*")
